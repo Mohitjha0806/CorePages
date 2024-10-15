@@ -6,12 +6,15 @@ namespace Core.Controllers
     {
         public IActionResult Contact()
         {
-            return View();
+            string num = "9584453705";
+            return View("Contact", num);
         }
 
         public IActionResult Blog()
         {
             return View();
         }
+
+
     }
 }
