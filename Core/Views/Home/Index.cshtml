@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-2 ">This is Home page.</h1>
+    <h1 class="display-4 fw-bold">Count</h1>
+    <div>
+        <p class="fs-1 fw-semibold" id="counterValue">0</p>
+        <button class="btn btn-warning" onclick="decrementCounter()">-</button>
+        <button class="btn btn-success" onclick="incrementCounter()">+</button>
+        
+    </div>
+</div>
+
+<script>
+    function incrementCounter() {
+        let countElement = document.getElementById('counterValue');
+        let currentCount = parseInt(countElement.innerText);
+        currentCount++;
+        countElement.innerText = currentCount;
+    }
+
+    function decrementCounter() {
+        let countElement = document.getElementById('counterValue');
+        let currentCount = parseInt(countElement.innerText);
+        currentCount--;
+        countElement.innerText = currentCount;
+    }
+</script>
